@@ -733,7 +733,7 @@ export function Closing({
 }) {
   const t = useT();
   const c = t.productPages.common;
-  const waUrl = `https://wa.me/60179778289?text=${encodeURIComponent(waMessage)}`;
+  const waUrl = `https://wa.me/60126762409?text=${encodeURIComponent(waMessage)}`;
   return (
     <Sec id="quote" tone="ink">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">

@@ -491,7 +491,7 @@ export const en = {
     hours: "Hours",
     service: "Service",
     studioAddr: "No 3, Jalan Tpk 1/6\nTaman Perindustrian Kinrara\n47180 Puchong, Selangor",
-    directInfo: "info@kovasunshade.com\n+60 17-977 8289",
+    directInfo: "info@kovasunshade.com\n+60 12-676 2409",
     hoursInfo: "Mon — Fri, 9 to 6\nSaturday by appointment",
     serviceInfo: "Klang Valley & beyond\nTrade & residential",
     nameLabel: "Your name",

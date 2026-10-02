@@ -29,7 +29,7 @@ export default function App() {
         </Suspense>
 
         {/* ✅ 2. 把全局挂件放在这里！它会伴随整个 App 的生命周期，不会随着页面切换而消失 */}
-        <WhatsAppChatWidget phoneE164="60179778289" />
+        <WhatsAppChatWidget phoneE164="60126762409" />
 
       </ConfiguratorProvider>
     </LangProvider>

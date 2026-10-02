@@ -54,7 +54,7 @@ export function JsonLd() {
     description: t.seo?.description || "Premium Window Blinds and Shades",
     url: SITE_URL,
     email: "info@kovasunshade.com",
-    telephone: "+60179778289",
+    telephone: "+60126762409",
     logo: LOGO_URL,
     image: `${SITE_URL}/showcase/greige-roller.webp`,
     address: {

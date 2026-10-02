@@ -463,7 +463,7 @@ export const ms: Dict = {
     hours: "Waktu",
     service: "Khidmat",
     studioAddr: "No 3, Jalan Tpk 1/6\nTaman Perindustrian Kinrara\n47180 Puchong, Selangor",
-    directInfo: "info@kovasunshade.com\n+60 17-977 8289",
+    directInfo: "info@kovasunshade.com\n+60 12-676 2409",
     hoursInfo: "Isnin — Jumaat, 9 hingga 6\nSabtu dengan janji temu",
     serviceInfo: "Lembah Klang & sekitarnya\nProfesional & kediaman",
     nameLabel: "Nama anda",
