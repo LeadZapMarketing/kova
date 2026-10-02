@@ -39,7 +39,7 @@ export const ms: Dict = {
       },
       vertisheer: {
         title:
-          "Bidai VertiSheer Malaysia · Untuk Pintu Gelangsar | Kova",
+          "Bidai VertiSheer Malaysia | Untuk Pintu Gelangsar | Kova",
         description:
           "VertiSheer untuk tingkap besar dan pintu gelangsar: lembut seperti langsir, dengan bilah kain yang boleh diputar untuk kawal cahaya. Dibuat ikut ukuran.",
         keywords:
@@ -47,7 +47,7 @@ export const ms: Dict = {
       },
       process: {
         title:
-          "Bidai Terus dari Kilang · Tanpa Caj Bilik Pameran | Kova",
+          "Bidai Terus dari Kilang | Tanpa Caj Bilik Pameran | Kova",
         description:
           "Kebanyakan bidai kena empat lapis caj: pengedar, pemborong, peruncit dan bilik pameran. Kami ukur, buat dan pasang sendiri — sehingga 40% lebih murah.",
         keywords:

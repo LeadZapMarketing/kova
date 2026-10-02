@@ -2,7 +2,7 @@ export const en = {
   meta: { htmlLang: "en", langLabel: "English" },
   seo: {
     title:
-      "Kova Sun Shade — Window Blinds Malaysia · Roller, Venetian & VertiSheer",
+      "Kova Sun Shade | Window Blinds Malaysia | Roller, Venetian & VertiSheer",
     description:
       "Factory-direct roller blinds, venetian blinds and VertiSheer made to measure in Petaling Jaya. Bidai dan langsir tingkap untuk rumah anda — up to 40% less than retail.",
     keywords:
@@ -13,7 +13,7 @@ export const en = {
         // with /roller for the same query; the Malay homepage already
         // targets the broad term.
         title:
-          "Window Blinds Malaysia · Factory-Direct, Up to 40% Less | Kova",
+          "Window Blinds Malaysia | Factory-Direct, Up to 40% Less | Kova",
         description:
           "Made-to-measure roller, Venetian and VertiSheer blinds, factory-direct at up to 40% less than retail. Free on-site measuring across Klang Valley.",
         keywords:
@@ -22,7 +22,7 @@ export const en = {
       roller: {
         // Now owns 'roller blinds Malaysia'; fabric types are the modifiers
         // people actually add to the search.
-        title: "Roller Blinds Malaysia · Blackout, Dim-Out & Sunscreen | Kova",
+        title: "Roller Blinds Malaysia | Blackout, Dim-Out & Sunscreen | Kova",
         description:
           "Made-to-measure roller blinds in blackout, dim-out, sunscreen and light-filtering fabrics — up to 40% less than retail. Free on-site measure in Klang Valley.",
         keywords:
@@ -37,7 +37,7 @@ export const en = {
       },
       vertisheer: {
         title:
-          "VertiSheer Malaysia · Sheer Blinds for Sliding Doors | Kova",
+          "VertiSheer Malaysia | Sheer Blinds for Sliding Doors | Kova",
         description:
           "VertiSheer vertical sheer blinds for sliding doors and large windows: curtain-soft fabric vanes that rotate for precise light and privacy. Made to measure.",
         keywords:
@@ -47,14 +47,14 @@ export const en = {
         // This page explains why Kova is cheaper — it should own
         // 'factory-direct blinds'.
         title:
-          "Factory-Direct Blinds Malaysia · No Showroom Mark-Up | Kova",
+          "Factory-Direct Blinds Malaysia | No Showroom Mark-Up | Kova",
         description:
           "Most blinds carry four mark-ups: distributor, wholesaler, retailer and showroom. We measure, make and install our own blinds, so you pay up to 40% less.",
         keywords:
           "factory direct blinds Malaysia, made to measure blinds Klang Valley, blinds installation Petaling Jaya, custom window blinds, on-site measure",
       },
       configurator: {
-        title: "Design Your Own Blinds Online · Live Fabric Preview | Kova",
+        title: "Design Your Own Blinds Online | Live Fabric Preview | Kova",
         description:
           "Pick roller, Venetian or VertiSheer, choose a fabric and opacity, and preview it live in a room. Send your design for a free factory-direct quote.",
         keywords:
@@ -63,7 +63,7 @@ export const en = {
       contact: {
         // Leads with the two free offers the site already makes, plus the
         // 48-hour promise.
-        title: "Free Blinds Quote & On-Site Measure · Klang Valley | Kova",
+        title: "Free Blinds Quote & On-Site Measure | Klang Valley | Kova",
         description:
           "Get a free, no-obligation blinds quote within 48 working hours. Send your window sizes or WhatsApp us, and we'll measure on-site for free in Klang Valley.",
         keywords:
