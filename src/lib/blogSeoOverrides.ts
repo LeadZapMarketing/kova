@@ -53,7 +53,7 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
     h1: "What Roller Blinds Do You Need for Your House?",
   },
   "factory-direct-blinds-malaysia": {
-    title: "Renovating? A Guide to Factory-Direct Blinds in Malaysia | Kova",
+    title: "Renovating? Guide to Factory-Direct Blinds Malaysia | Kova",
     description:
       "Planning a renovation? What factory-direct blinds really mean, when to order them, how to compare quotes fairly, and why to plan motorisation early.",
     h1: "A Smarter Way to Dress Your Windows When Renovating",
@@ -75,7 +75,7 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
       "Sedang renovasi? Maksud sebenar bidai terus dari kilang, bila perlu tempah, cara banding sebut harga dengan adil, dan kenapa rancang bidai bermotor awal.",
   },
   "memilih-bidai-dan-langsir-rumah": {
-    title: "Kenapa Harga Bidai & Langsir Mahal? Cara Dapat Harga Kilang",
+    title: "Kenapa Bidai & Langsir Mahal? Cara Dapat Harga Kilang",
     description:
       "Kenapa harga bidai dan langsir di pasaran selalu mahal? Dari mana datangnya caj tambahan, dan cara dapatkan bidai berkualiti terus dari kilang.",
   },

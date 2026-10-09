@@ -15,6 +15,12 @@ import { blogSeoOverrides } from "@/lib/blogSeoOverrides";
  * index.css). 404s land on a soft empty state with a link back to the
  * journal index rather than throwing.
  */
+// The page already renders the post title as its one H1; Supabase bodies that
+// start sections with <h1> are demoted to <h2> so each article keeps a single H1.
+function demoteH1(html: string) {
+  return html.replace(/<(\/?)h1(?=[\s>])/gi, "<$1h2");
+}
+
 export function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { pathname } = useLocation();
@@ -184,7 +190,7 @@ export function BlogPost() {
 
                 <div
                   className="prose-kova mt-10 lg:mt-14"
-                  dangerouslySetInnerHTML={{ __html: post.content ?? "" }}
+                  dangerouslySetInnerHTML={{ __html: demoteH1(post.content ?? "") }}
                 />
               </article>
             )}

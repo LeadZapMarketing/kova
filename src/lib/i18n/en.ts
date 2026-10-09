@@ -13,7 +13,7 @@ export const en = {
         // with /roller for the same query; the Malay homepage already
         // targets the broad term.
         title:
-          "Window Blinds Malaysia | Factory-Direct, Up to 40% Less | Kova",
+          "Factory-Direct Window Blinds Malaysia, Up to 40% Less | Kova",
         description:
           "Made-to-measure roller, Venetian and VertiSheer blinds, factory-direct at up to 40% less than retail. Free on-site measuring across Klang Valley.",
         keywords:
@@ -22,14 +22,14 @@ export const en = {
       roller: {
         // Now owns 'roller blinds Malaysia'; fabric types are the modifiers
         // people actually add to the search.
-        title: "Roller Blinds Malaysia | Blackout, Dim-Out & Sunscreen | Kova",
+        title: "Roller Blinds Malaysia: Blackout & Sunscreen | Kova",
         description:
           "Made-to-measure roller blinds in blackout, dim-out, sunscreen and light-filtering fabrics — up to 40% less than retail. Free on-site measure in Klang Valley.",
         keywords:
           "roller blinds Malaysia, made to measure roller blinds, blackout roller blinds, sunscreen blinds, dim-out blinds, bidai Roller, bidai Roller Malaysia, Cenza, Denver, Shiro, Petaling Jaya",
       },
       venetian: {
-        title: "Venetian Blinds Malaysia · Aluminium & Wood Finishes | Kova",
+        title: "Venetian Blinds Malaysia · Aluminium & Wood | Kova",
         description:
           "Venetian blinds in aluminium, wood and faux-wood finishes. Tilt the slats to control light, privacy and airflow. Made to measure, installed in Klang Valley.",
         keywords:
@@ -63,7 +63,7 @@ export const en = {
       contact: {
         // Leads with the two free offers the site already makes, plus the
         // 48-hour promise.
-        title: "Free Blinds Quote & On-Site Measure | Klang Valley | Kova",
+        title: "Free Blinds Quote & On-Site Measure, Klang Valley | Kova",
         description:
           "Get a free, no-obligation blinds quote within 48 working hours. Send your window sizes or WhatsApp us, and we'll measure on-site for free in Klang Valley.",
         keywords:

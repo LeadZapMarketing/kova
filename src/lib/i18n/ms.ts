@@ -15,7 +15,7 @@ export const ms: Dict = {
         // dikemas kini supaya sebut ketiga-tiga produk + tawaran ukur
         // percuma, sepadan dengan versi Inggeris.
         title:
-          "Bidai & Langsir Tingkap Malaysia · Terus dari Kilang | Kova",
+          "Bidai & Langsir Tingkap Malaysia · Dari Kilang | Kova",
         description:
           "Bidai dan langsir tingkap ikut ukuran — roller, Venetian dan VertiSheer, terus dari kilang, sehingga 40% lebih murah. Pengukuran percuma di Lembah Klang.",
         keywords:
@@ -23,7 +23,7 @@ export const ms: Dict = {
       },
       roller: {
         title:
-          "Bidai Roller Malaysia · Blackout, Dim-Out & Sunscreen | Kova",
+          "Bidai Roller Malaysia · Blackout & Sunscreen | Kova",
         description:
           "Bidai roller ikut ukuran: blackout, dim-out, sunscreen dan penapis cahaya. Terus dari kilang, sehingga 40% lebih murah. Pengukuran percuma di Lembah Klang.",
         keywords:
@@ -31,7 +31,7 @@ export const ms: Dict = {
       },
       venetian: {
         title:
-          "Bidai Venetian Malaysia · Kemasan Aluminium & Kayu | Kova",
+          "Bidai Venetian Malaysia · Aluminium & Kayu | Kova",
         description:
           "Bidai Venetian dalam kemasan aluminium, kayu dan kayu tiruan. Miringkan bilah untuk kawal cahaya, privasi dan udara. Ikut ukuran, dipasang di Lembah Klang.",
         keywords:
@@ -62,7 +62,7 @@ export const ms: Dict = {
       },
       contact: {
         title:
-          "Sebut Harga Bidai Percuma & Ukur di Lokasi · Lembah Klang",
+          "Sebut Harga & Ukur Bidai Percuma · Lembah Klang | Kova",
         description:
           "Dapatkan sebut harga bidai percuma dalam 48 jam. Hantar ukuran tingkap atau WhatsApp kami, dan kami datang ukur di lokasi secara percuma di Lembah Klang.",
         keywords:
