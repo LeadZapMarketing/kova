@@ -4,6 +4,7 @@ import { useT, useLang } from "@/lib/i18n";
 import { useConfigurator } from "@/lib/configurator/context";
 import { useRoutes } from "@/lib/routes";
 import { submitLead } from "@/lib/leads";
+import { lzEnquiry } from "@/lib/enquiry";
 import { trackGenerateLead, trackWhatsAppClick } from "@/lib/analytics";
 
 export function Contact() {
@@ -90,6 +91,12 @@ export function Contact() {
         setSubmitting(false);
         setSent(true);
       });
+    // Backup copy to the LeadZap enquiry store, next to the form's own send.
+    lzEnquiry("contact", {
+      ...lead,
+      configSummary: lastSummary || "",
+      lang,
+    });
 
     // Kova answers on WhatsApp: hand the same details over in a prefilled
     // chat. Opened here, inside the submit gesture, so popup blockers allow

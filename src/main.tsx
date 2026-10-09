@@ -6,6 +6,8 @@ import App from './App';
 // 首页 (Home) 作为首屏门面，必须保持直接引入！
 import { Home } from './pages/Home';
 import './index.css';
+// Sends any enquiry backup a closed tab left behind (see lib/enquiry).
+import './lib/enquiry';
 import { getPost, listPostPaths } from './lib/blog';
 
 // --- 博客文章预渲染（SSG）---
