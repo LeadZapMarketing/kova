@@ -81,7 +81,7 @@ export function Contact() {
     setSubmitting(true);
     // Record the lead (Sheet + Supabase), count it once it is accepted, then
     // always thank the visitor (submitLead never throws — it stashes on failure).
-    submitLead({ ...lead, configSummary: lastSummary, lang })
+    const recorded = submitLead({ ...lead, configSummary: lastSummary, lang })
       .then((accepted) => {
         if (accepted) trackGenerateLead();
       })
@@ -96,8 +96,16 @@ export function Contact() {
     // it; the lead write above keeps running in this tab.
     const waUrl = whatsAppLeadUrl(lead, lang);
     const chat = window.open(waUrl, "_blank");
-    if (chat) chat.opener = null;
-    else window.location.href = waUrl;
+    if (chat) {
+      chat.opener = null;
+      return;
+    }
+    // Popup blocked: this tab goes to WhatsApp instead, so let the lead write
+    // finish first (capped, so the visitor is never left waiting).
+    const cap = new Promise((resolve) => setTimeout(resolve, 4000));
+    Promise.race([recorded, cap]).finally(() => {
+      window.location.href = waUrl;
+    });
   };
 
   return (
