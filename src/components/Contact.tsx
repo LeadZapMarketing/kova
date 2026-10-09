@@ -69,19 +69,19 @@ export function Contact() {
       .map((v) => String(v))
       .join(", ");
 
-    setSubmitting(true);
-    // Fire the lead to the agency Supabase, then always thank the
-    // visitor (submitLead never throws — it stashes on failure).
-    submitLead({
+    const lead = {
       name: String(data.get("name") || ""),
       phone: String(data.get("phone") || ""),
       email: String(data.get("email") || ""),
       location: String(data.get("location") || ""),
       message: String(data.get("message") || ""),
       interest: interests,
-      configSummary: lastSummary,
-      lang,
-    })
+    };
+
+    setSubmitting(true);
+    // Record the lead (Sheet + Supabase), count it once it is accepted, then
+    // always thank the visitor (submitLead never throws — it stashes on failure).
+    submitLead({ ...lead, configSummary: lastSummary, lang })
       .then((accepted) => {
         if (accepted) trackGenerateLead();
       })
@@ -90,6 +90,14 @@ export function Contact() {
         setSubmitting(false);
         setSent(true);
       });
+
+    // Kova answers on WhatsApp: hand the same details over in a prefilled
+    // chat. Opened here, inside the submit gesture, so popup blockers allow
+    // it; the lead write above keeps running in this tab.
+    const waUrl = whatsAppLeadUrl(lead, lang);
+    const chat = window.open(waUrl, "_blank");
+    if (chat) chat.opener = null;
+    else window.location.href = waUrl;
   };
 
   return (
@@ -359,4 +367,24 @@ function Field({
       )}
     </div>
   );
+}
+
+const WHATSAPP_NUMBER = "60126762409";
+
+/** wa.me link with the form's details prefilled, in the visitor's language. */
+function whatsAppLeadUrl(
+  lead: { name: string; phone: string; email: string; location: string; message: string; interest: string },
+  lang: string,
+) {
+  const ms = lang === "ms";
+  const lines = [
+    ms ? "Hai Kova, saya ingin mendapatkan sebut harga." : "Hi Kova, I'd like a quote.",
+    lead.name && `${ms ? "Nama" : "Name"}: ${lead.name}`,
+    lead.phone && `${ms ? "Telefon" : "Phone"}: ${lead.phone}`,
+    lead.email && `Email: ${lead.email}`,
+    lead.location && `${ms ? "Kawasan" : "Area"}: ${lead.location}`,
+    lead.interest && `${ms ? "Berminat" : "Interested in"}: ${lead.interest}`,
+    lead.message,
+  ].filter(Boolean);
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
 }
