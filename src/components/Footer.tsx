@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useT } from "@/lib/i18n";
 import { useRoutes } from "@/lib/routes";
+import { trackPhoneClick } from "@/lib/analytics";
 
 export function Footer() {
   const t = useT();
@@ -49,6 +50,7 @@ export function Footer() {
                         {isExternal ? (
                           <a
                             href={href}
+                            onClick={href.startsWith("tel:") ? trackPhoneClick : undefined}
                             className="text-[0.88rem] lg:text-[0.95rem] text-[var(--color-ink-soft)] hover:text-[var(--color-clay-deep)] transition-colors"
                           >
                             {label}

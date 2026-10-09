@@ -29,18 +29,42 @@
  * click and the beacon has time to leave — no navigation delay needed.
  */
 export function trackWhatsAppClick() {
+  sendLeadEvent("whatsapp_click", "whatsapp_button");
+}
+
+/**
+ * Fire when the contact form's backend accepted a real lead. Call it only
+ * after submitLead() resolved `true` — never for the honeypot (spam) path
+ * or a submit that never left the browser.
+ */
+export function trackGenerateLead() {
+  sendLeadEvent("generate_lead", "contact_form");
+}
+
+/** Fire on a tap of any `tel:` link. */
+export function trackPhoneClick() {
+  sendLeadEvent("phone_click", "phone_link");
+}
+
+/**
+ * The one way every lead event leaves the page (owner standard, 4 Oct 2026):
+ * a gtag `event` for GA4 plus a dataLayer push for GTM, same name/category/
+ * label triple on both. If a Google Ads conversion is ever added, send it
+ * here next to these two.
+ */
+function sendLeadEvent(name: string, label: string) {
   try {
-    window.gtag?.("event", "whatsapp_click", {
+    window.gtag?.("event", name, {
       event_category: "engagement",
-      event_label: "whatsapp_button",
+      event_label: label,
     });
 
     window.dataLayer?.push({
-      event: "whatsapp_click",
+      event: name,
       event_category: "engagement",
-      event_label: "whatsapp_button",
+      event_label: label,
     });
   } catch {
-    // Analytics must never break the outbound link.
+    // Analytics must never break the click or the form.
   }
 }

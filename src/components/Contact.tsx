@@ -4,7 +4,7 @@ import { useT, useLang } from "@/lib/i18n";
 import { useConfigurator } from "@/lib/configurator/context";
 import { useRoutes } from "@/lib/routes";
 import { submitLead } from "@/lib/leads";
-import { trackWhatsAppClick } from "@/lib/analytics";
+import { trackGenerateLead, trackWhatsAppClick } from "@/lib/analytics";
 
 export function Contact() {
   const t = useT();
@@ -81,11 +81,15 @@ export function Contact() {
       interest: interests,
       configSummary: lastSummary,
       lang,
-    }).finally(() => {
-      localStorage.setItem("lastContactSubmit", Date.now().toString());
-      setSubmitting(false);
-      setSent(true);
-    });
+    })
+      .then((accepted) => {
+        if (accepted) trackGenerateLead();
+      })
+      .finally(() => {
+        localStorage.setItem("lastContactSubmit", Date.now().toString());
+        setSubmitting(false);
+        setSent(true);
+      });
   };
 
   return (
