@@ -43,7 +43,7 @@ export function Contact() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submissionToken]);
 
-  // 提交表单：走统一的 submitLead() 管道（Google Sheet + Supabase 双写），
+  // 提交表单：走统一的 submitLead() 管道（写入 Google Sheet），
   // 外加蜜罐字段和 60 秒冷却期这两个轻量防刷措施。
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ export function Contact() {
     };
 
     setSubmitting(true);
-    // Record the lead (Sheet + Supabase), count it once it is accepted, then
+    // Record the lead (Sheet), count it once it is accepted, then
     // always thank the visitor (submitLead never throws — it stashes on failure).
     const recorded = submitLead({ ...lead, configSummary: lastSummary, lang })
       .then((accepted) => {

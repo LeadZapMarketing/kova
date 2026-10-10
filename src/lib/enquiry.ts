@@ -1,7 +1,7 @@
 /**
  * LeadZap enquiry intake (backup copy of every form enquiry, 9 Oct 2026).
  *
- * Sent AS WELL AS the form's own delivery (Sheet + Supabase + WhatsApp),
+ * Sent AS WELL AS the form's own delivery (Sheet + WhatsApp),
  * never instead of it. Each enquiry is queued in localStorage and retried
  * until the intake stores it (or answers that it never can), so a closed tab
  * or a dropped connection loses nothing. The same id again is the same

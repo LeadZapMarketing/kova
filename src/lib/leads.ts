@@ -1,28 +1,17 @@
 /**
  * Lead capture → LeadZap agency pipeline.
  *
- * DUAL-WRITE, both fire-and-forget so a visitor's submit never blocks on
- * either destination:
- *
- *   1. Google Sheet (live now)  — a plain `no-cors` POST to a bound Apps
- *      Script web app that appends a row. Works today with zero backend and
- *      no Supabase dependency. This is the destination the agency actually
- *      watches while the console is being built.
- *   2. Supabase `leads` table (when configured) — a REST insert with the
- *      project anon key. Insert-only RLS makes the anon key safe to embed.
- *      The SEO console reads this (service role) for the per-client view.
+ * One write, fire-and-forget so a visitor's submit never blocks on it: a
+ * plain `no-cors` POST to a bound Google Apps Script web app that appends a
+ * row to the agency's Sheet. (The old second write to an agency Supabase
+ * `leads` table was removed 10 Oct 2026: the table never existed, so it only
+ * sent the visitor's details out for nothing.) The LeadZap enquiry backup
+ * (src/lib/enquiry.ts) is called separately by the form.
  *
  * Any client site reuses this module by overriding the VITE_* build vars and
- * VITE_CLIENT_SLUG. Both writes are best-effort; on total failure the lead is
- * stashed to localStorage so nothing is silently lost.
+ * VITE_CLIENT_SLUG. If the Sheet is not configured the lead is stashed to
+ * localStorage so nothing is silently lost.
  */
-
-// --- Supabase (agency multi-tenant table) -------------------------------
-const LEADS_URL =
-  (import.meta.env.VITE_LEADS_SUPABASE_URL as string | undefined) ||
-  "https://tfgkbxrxzmjexnuwwhcj.supabase.co";
-const LEADS_ANON =
-  (import.meta.env.VITE_LEADS_SUPABASE_ANON_KEY as string | undefined) || "";
 
 // --- Google Sheet (Apps Script web app) ---------------------------------
 const SHEET_URL =
@@ -66,14 +55,10 @@ export async function submitLead(input: LeadInput): Promise<boolean> {
     user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
   };
 
-  const results = await Promise.allSettled([sendToSheet(row), sendToSupabase(row)]);
-  const anyOk = results.some((r) => r.status === "fulfilled" && r.value === true);
-
   // The Sheet write is no-cors (opaque) so we can't confirm it — treat a
-  // configured Sheet as best-effort success. Only stash if BOTH are
-  // unconfigured or the Supabase write is the only path and it failed.
-  const sheetAttempted = Boolean(SHEET_URL && SHEET_TOKEN);
-  if (!anyOk && !sheetAttempted) {
+  // configured Sheet as best-effort success. Stash only when it is unconfigured.
+  const ok = await sendToSheet(row);
+  if (!ok && !(SHEET_URL && SHEET_TOKEN)) {
     stash(row);
     return false;
   }
@@ -98,35 +83,6 @@ async function sendToSheet(row: Record<string, unknown>): Promise<boolean> {
     return true; // opaque — assume delivered
   } catch (err) {
     console.warn("[leads] sheet write failed", err);
-    return false;
-  }
-}
-
-/** Insert into the agency Supabase leads table (when configured). */
-async function sendToSupabase(row: Record<string, unknown>): Promise<boolean> {
-  if (!LEADS_ANON) return false;
-  try {
-    const res = await fetch(`${LEADS_URL}/rest/v1/leads`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: LEADS_ANON,
-        Authorization: `Bearer ${LEADS_ANON}`,
-        Prefer: "return=minimal",
-      },
-      body: JSON.stringify(row),
-    });
-    if (!res.ok) {
-      // Table may not exist yet (blocked on account access) — that's expected
-      // for now; the Sheet is the live destination. Don't spam the console.
-      if (res.status !== 404) {
-        console.warn("[leads] supabase insert failed", res.status);
-      }
-      return false;
-    }
-    return true;
-  } catch (err) {
-    console.warn("[leads] supabase network error", err);
     return false;
   }
 }
