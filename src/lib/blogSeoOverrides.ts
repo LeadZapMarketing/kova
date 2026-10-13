@@ -64,9 +64,9 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
       "Why do blinds and curtains cost so much in showrooms? Where the mark-ups come from, and how factory-direct blind curtains cost Malaysian homes less.",
   },
   "bidai-malaysia": {
-    title: "Panduan Lengkap Bidai Roller untuk Rumah di Malaysia | Kova",
+    title: "Bidai Rumah: Panduan Bidai Roller vs Langsir | Kova",
     description:
-      "Apa itu bidai roller, kain yang sesuai untuk cuaca panas Malaysia, cara memilih untuk setiap ruang, bidai roller berbanding langsir dan tip penjagaan.",
+      "Pilih bidai rumah yang betul: kain bidai roller untuk cuaca panas Malaysia, bidai atau langsir untuk setiap bilik, dan tip penjagaan. Ukur percuma.",
     h1: "Penyelesaian Tingkap Bidai Pintar Untuk Setiap Rumah di Malaysia",
   },
   "bidai-terus-dari-kilang-malaysia": {
