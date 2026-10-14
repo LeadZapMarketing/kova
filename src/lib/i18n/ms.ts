@@ -534,7 +534,7 @@ export const ms: Dict = {
     titleA: "Jawapan, sebelum",
     titleB: "anda bertanya.",
     intro:
-      "Lima perkara yang pelanggan paling kerap tanya sebelum mereka hubungi. Ada yang tertinggal? Bagi tahu kami — kami akan tambah.",
+      "Lapan perkara yang pelanggan paling kerap tanya tentang bidai tingkap dan langsir tingkap sebelum mereka hubungi. Ada yang tertinggal? Bagi tahu kami — kami akan tambah.",
     items: [
       {
         q: "Berapa harga bidai dibuat ikut ukuran di Malaysia?",
@@ -555,6 +555,18 @@ export const ms: Dict = {
       {
         q: "Bidai jenis mana paling sesuai untuk pintu gelongsor dan dinding kaca?",
         a: "VertiSheer direka khas untuk pintu gelongsor dan dinding kaca — bilah kain menegak yang trek lancar sampai 6 meter tanpa kendur. Roller dan Venetian boleh juga, tapi VertiSheer paling kemas untuk bukaan besar.",
+      },
+      {
+        q: "Apakah beza bidai tingkap dan langsir tingkap?",
+        a: "Langsir tingkap ialah kain berlipat yang tergantung pada rel dan ditarik ke tepi. Bidai tingkap pula dipasang rapat pada bingkai tingkap — sehelai kain (Roller), bilah mendatar (Venetian) atau bilah kain menegak (VertiSheer) — jadi ia lebih kemas, lebih mudah dibersihkan dan memberi kawalan cahaya yang lebih tepat. Kalau anda suka rupa lembut langsir tapi mahu kemudahan bidai, VertiSheer menggabungkan kedua-duanya.",
+      },
+      {
+        q: "Bidai tingkap jenis mana sesuai untuk bilik tidur, ruang tamu dan dapur?",
+        a: "Bilik tidur: bidai Roller blackout atau dim-out untuk tidur yang gelap. Ruang tamu: Roller sunscreen atau VertiSheer supaya cahaya siang masuk tanpa silau dan pandangan luar kekal. Dapur dan bilik air: bidai Venetian aluminium kerana tahan lembap dan mudah dilap. Kami bawa sampel kain semasa pengukuran supaya anda boleh lihat dalam cahaya rumah sendiri.",
+      },
+      {
+        q: "Di mana kawasan yang anda pasang bidai?",
+        a: "Kami ukur dan pasang bidai di seluruh Lembah Klang — Kuala Lumpur dan Selangor — terus dari bengkel kami. Untuk rumah, kondominium, pejabat atau kedai di luar Lembah Klang, hantar mesej WhatsApp dahulu dan kami akan sahkan.",
       },
     ],
   },
