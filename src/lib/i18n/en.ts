@@ -29,9 +29,12 @@ export const en = {
           "roller blinds Malaysia, made to measure roller blinds, blackout roller blinds, sunscreen blinds, dim-out blinds, bidai Roller, bidai Roller Malaysia, Cenza, Denver, Shiro, Petaling Jaya",
       },
       venetian: {
-        title: "Venetian Blinds Malaysia · Aluminium & Wood | Kova",
+        // Same pattern as /roller: the head term, the two material
+        // modifiers people search (aluminium 210, wooden 140), then the
+        // factory-direct offer and free measure in the snippet.
+        title: "Venetian Blinds Malaysia: Aluminium & Wood | Kova",
         description:
-          "Venetian blinds in aluminium, wood and faux-wood finishes. Tilt the slats to control light, privacy and airflow. Made to measure, installed in Klang Valley.",
+          "Made-to-measure aluminium and wood venetian blinds, up to 40% less than retail. Tilt the slats for light and privacy. Free on-site measure in Klang Valley.",
         keywords:
           "venetian blinds Malaysia, aluminium venetian blinds, wood venetian blinds, faux wood blinds, bidai Venetian, W101, W301, W302, W206, Petaling Jaya",
       },
