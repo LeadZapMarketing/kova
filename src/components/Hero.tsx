@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ImageSlot } from "./ImageSlot";
-import { Reveal } from "./Reveal";
 import { useT } from "@/lib/i18n";
 import { useRoutes } from "@/lib/routes";
 
@@ -19,6 +18,9 @@ import { useRoutes } from "@/lib/routes";
  * The H1 is one element split into a head term (`titleA`) and an italic
  * tail (`titleB`), so the term reads large while the modifier still counts
  * as heading text.
+ *
+ * No Reveal fade here: the hero is the first screen, and a fade that waits
+ * for JavaScript held back the largest paint on phones (about 8 s).
  */
 export function Hero() {
   const t = useT();
@@ -30,14 +32,10 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_.95fr] gap-[clamp(2rem,1rem+3vw,4.5rem)] items-center">
           {/* Copy — second on mobile so the photograph leads on small screens */}
           <div className="order-2 lg:order-1">
-            <Reveal>
               {/* Same eyebrow treatment as every other section; the reference's
                   workshop line on desktop, the product line-up on mobile. */}
               <p className="eyebrow hidden lg:block">{t.hero.eyebrow}</p>
               <p className="eyebrow lg:hidden">{t.hero.eyebrowMobile}</p>
-            </Reveal>
-
-            <Reveal delay={80}>
               {/* Same H1 treatment as the product pages: bold and upright,
                   with the italic tail on the line below. */}
               <h1 className="mt-3 lg:mt-4 headline fluid-h2 font-bold not-italic text-[var(--color-ink)]">
@@ -46,15 +44,9 @@ export function Hero() {
                   {t.hero.titleB}
                 </span>
               </h1>
-            </Reveal>
-
-            <Reveal delay={150}>
               <p className="mt-5 lg:mt-6 max-w-[58ch] fluid-body text-[var(--color-ink-soft)]">
                 {t.hero.body}
               </p>
-            </Reveal>
-
-            <Reveal delay={220}>
               <div className="mt-6 lg:mt-8 flex flex-wrap items-center gap-2 lg:gap-3">
                 <Link
                   to={r.contact}
@@ -70,9 +62,6 @@ export function Hero() {
                   {t.hero.ctaB}
                 </Link>
               </div>
-            </Reveal>
-
-            <Reveal delay={300}>
               <ul className="mt-8 lg:mt-10 pt-5 lg:pt-6 border-t border-[var(--color-line)] flex flex-wrap gap-x-[clamp(1.25rem,0.5rem+2vw,2.75rem)] gap-y-2.5 text-[0.88rem] leading-snug text-[var(--color-muted)]">
                 {t.hero.trust.map((item) => (
                   <li key={item} className="flex items-center gap-2">
@@ -81,11 +70,10 @@ export function Hero() {
                   </li>
                 ))}
               </ul>
-            </Reveal>
           </div>
 
           {/* Photograph — first on mobile, in the site's paper frame */}
-          <Reveal delay={120} className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2">
             <figure className="m-0 bg-[var(--color-paper)] border border-[var(--color-line)] rounded-lg p-3.5 pb-0 shadow-[0_1px_2px_rgba(34,32,28,.04),0_12px_28px_-18px_rgba(34,32,28,.28)]">
               <ImageSlot
                 ratio="5/4"
@@ -102,7 +90,7 @@ export function Hero() {
                 {t.hero.figureLabel}
               </figcaption>
             </figure>
-          </Reveal>
+          </div>
         </div>
       </div>
     </section>
