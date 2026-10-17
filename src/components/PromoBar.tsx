@@ -6,15 +6,22 @@ import { useRoutes } from "@/lib/routes";
 /** Fired whenever the bar's height changes (mount, text rewrap, dismissal). */
 export const PROMO_RESIZE_EVENT = "kova:promo-resize";
 
+/**
+ * Runs while the prerendered HTML is parsed, right after the bar and before
+ * the header: it gives the fixed header the bar's height before the first
+ * paint, so the header does not drop down when JavaScript loads.
+ */
+const PLACE_HEADER_SCRIPT = `(function(){var b=document.querySelector("[data-promo-bar]");if(!b)return;try{if(sessionStorage.getItem("kova-promo-closed")==="1"){b.style.display="none";return}}catch(e){}document.documentElement.style.setProperty("--promo-h",b.offsetHeight+"px")})()`;
+
 export function PromoBar() {
   const t = useT();
   const r = useRoutes();
   const [closed, setClosed] = useState(false);
-  const [ready, setReady] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
 
+  // The bar is in the prerendered HTML, so it is there at first paint and the
+  // page below it never jumps down when JavaScript loads (layout shift).
   useEffect(() => {
-    setReady(true);
     const stored = sessionStorage.getItem("kova-promo-closed");
     if (stored === "1") setClosed(true);
   }, []);
@@ -24,7 +31,7 @@ export function PromoBar() {
    * instead of underneath us. The bar wraps to two or three lines on narrow
    * screens, so this is measured, not hardcoded.
    */
-  const visible = ready && !closed;
+  const visible = !closed;
   useEffect(() => {
     const root = document.documentElement;
     const publish = (px: number) => {
@@ -52,39 +59,43 @@ export function PromoBar() {
   if (!visible) return null;
 
   return (
-    <div
-      ref={barRef}
-      className="relative z-[60] bg-[var(--color-ink)] text-[var(--color-cream)]"
-    >
-      <div className="max-w-[1240px] mx-auto px-6 lg:px-10 py-2.5 flex items-center justify-between gap-4">
-        <p className="text-[0.82rem] sm:text-[0.86rem] tracking-tight">
-          <span className="text-[var(--color-sand)]">{t.promo.tag}</span>{" "}
-          <span className="font-medium">{t.promo.title}</span>
-          <span className="hidden sm:inline text-[var(--color-cream)]/70">
-            {t.promo.note}
-          </span>
-        </p>
-        <div className="flex items-center gap-4 shrink-0">
-          <Link
-            to={r.process}
-            className="text-[0.82rem] font-medium text-[var(--color-clay-light)] hover:text-[var(--color-cream)] transition-colors inline-flex items-center gap-1"
-          >
-            {t.promo.cta}
-            <span aria-hidden>→</span>
-          </Link>
-          <button
-            type="button"
-            onClick={() => {
-              setClosed(true);
-              sessionStorage.setItem("kova-promo-closed", "1");
-            }}
-            aria-label={t.promo.dismiss}
-            className="text-[var(--color-cream)]/60 hover:text-[var(--color-cream)] transition-colors text-lg leading-none"
-          >
-            ×
-          </button>
+    <>
+      <div
+        ref={barRef}
+        data-promo-bar
+        className="relative z-[60] bg-[var(--color-ink)] text-[var(--color-cream)]"
+      >
+        <div className="max-w-[1240px] mx-auto px-6 lg:px-10 py-2.5 flex items-center justify-between gap-4">
+          <p className="text-[0.82rem] sm:text-[0.86rem] tracking-tight">
+            <span className="text-[var(--color-sand)]">{t.promo.tag}</span>{" "}
+            <span className="font-medium">{t.promo.title}</span>
+            <span className="hidden sm:inline text-[var(--color-cream)]/70">
+              {t.promo.note}
+            </span>
+          </p>
+          <div className="flex items-center gap-4 shrink-0">
+            <Link
+              to={r.process}
+              className="text-[0.82rem] font-medium text-[var(--color-clay-light)] hover:text-[var(--color-cream)] transition-colors inline-flex items-center gap-1"
+            >
+              {t.promo.cta}
+              <span aria-hidden>→</span>
+            </Link>
+            <button
+              type="button"
+              onClick={() => {
+                setClosed(true);
+                sessionStorage.setItem("kova-promo-closed", "1");
+              }}
+              aria-label={t.promo.dismiss}
+              className="text-[var(--color-cream)]/60 hover:text-[var(--color-cream)] transition-colors text-lg leading-none"
+            >
+              ×
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      <script dangerouslySetInnerHTML={{ __html: PLACE_HEADER_SCRIPT }} />
+    </>
   );
 }
