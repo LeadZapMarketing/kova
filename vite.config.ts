@@ -24,7 +24,14 @@ export default defineConfig({
     },
   },
   ssgOptions: {
-    dirStyle: 'nested'
+    dirStyle: 'nested',
+    // Critical CSS (beasties): inline each page's above-the-fold rules and
+    // load the full stylesheet after the content. Leave the <style> tags
+    // React renders inside the page alone, or hydration no longer matches.
+    beastiesOptions: {
+      reduceInlineStyles: false,
+      mergeStylesheets: false,
+    },
   },
   // 👇 添加下面这段 build 配置
   build: {
