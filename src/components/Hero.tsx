@@ -72,8 +72,10 @@ export function Hero() {
               </ul>
           </div>
 
-          {/* Photograph — first on mobile, in the site's paper frame */}
-          <div className="order-1 lg:order-2">
+          {/* Photograph — first on mobile, in the site's paper frame. Pinned
+              to the top on desktop (not centred), so it does not jump when the
+              headline font loads and the copy column changes height. */}
+          <div className="order-1 lg:order-2 lg:self-start lg:mt-[72px]">
             <figure className="m-0 bg-[var(--color-paper)] border border-[var(--color-line)] rounded-lg p-3.5 pb-0 shadow-[0_1px_2px_rgba(34,32,28,.04),0_12px_28px_-18px_rgba(34,32,28,.28)]">
               <ImageSlot
                 ratio="5/4"
