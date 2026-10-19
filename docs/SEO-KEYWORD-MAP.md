@@ -45,7 +45,7 @@ Order = strike score (volume × beatable slots), then language balance. Dates ar
 
 | # | Due | Lang | Target term (vol/mo · slots) | Working title | Links to |
 |---:|---|---|---|---|---|
-| 1 | 21 Oct | en | how to clean blinds 170 · 6 | How to Clean Roller, Venetian and Sheer Blinds | /roller, /venetian, /vertisheer |
+| 1 | 21 Oct (live 19 Oct) | en | how to clean blinds 170 · 6 | How to Clean Roller, Venetian and Sheer Blinds | /roller, /venetian, /vertisheer |
 | 2 | 28 Oct | ms | langsir blackout 210 · 3 | Langsir Blackout atau Bidai Blackout: Mana Lebih Gelap untuk Bilik Tidur? | /bidai/roller |
 | 3 | 4 Nov | en | motorized blinds 90 · 3 (+ motorised blinds 110, smart blinds 70) | Motorised Blinds: How They Work and When They Are Worth It | /roller |
 | 4 | 11 Nov | en | blinds for living room 50 · 3 | Choosing Blinds for a Malaysian Living Room | /roller, /vertisheer |

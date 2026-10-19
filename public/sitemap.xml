@@ -219,4 +219,13 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://kovasunshade.com/blog/how-to-clean-blinds</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kovasunshade.com/blog/how-to-clean-blinds"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kovasunshade.com/blog/how-to-clean-blinds"/>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

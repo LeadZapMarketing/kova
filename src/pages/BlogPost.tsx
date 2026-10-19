@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import { Link, useLoaderData, useLocation, useParams } from "react-router-dom";
 import { Head } from "vite-react-ssg";
 import { Nav } from "@/components/Nav";
@@ -8,6 +8,7 @@ import { buildArticleJsonLd } from "@/components/JsonLd";
 import { useT } from "@/lib/i18n";
 import { getPost, formatPostDate, type BlogPost } from "@/lib/blog";
 import { blogSeoOverrides } from "@/lib/blogSeoOverrides";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
 /**
  * Single blog post — fetches by slug from the URL and renders the
@@ -19,6 +20,15 @@ import { blogSeoOverrides } from "@/lib/blogSeoOverrides";
 // start sections with <h1> are demoted to <h2> so each article keeps a single H1.
 function demoteH1(html: string) {
   return html.replace(/<(\/?)h1(?=[\s>])/gi, "<$1h2");
+}
+
+// WhatsApp and phone links inside an article body count as leads like the
+// site's own buttons do (the body is raw HTML, so one delegated listener).
+function trackBodyLeadClick(e: MouseEvent<HTMLDivElement>) {
+  const link = (e.target as HTMLElement).closest("a");
+  const href = link?.getAttribute("href") ?? "";
+  if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) trackWhatsAppClick();
+  else if (href.startsWith("tel:")) trackPhoneClick();
 }
 
 export function BlogPost() {
@@ -190,6 +200,7 @@ export function BlogPost() {
 
                 <div
                   className="prose-kova mt-10 lg:mt-14"
+                  onClick={trackBodyLeadClick}
                   dangerouslySetInnerHTML={{ __html: demoteH1(post.content ?? "") }}
                 />
               </article>

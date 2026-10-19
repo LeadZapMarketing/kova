@@ -48,6 +48,23 @@ function urlEntry({ loc, en, ms, xDefault, changefreq, priority, lastmod }) {
   return lines.join("\n");
 }
 
+// Posts kept in the repo (src/content/posts, see lib/blog.ts) — merged with Supabase's.
+function localPosts() {
+  const path = resolve(root, "src/content/posts/local-posts.json");
+  if (!existsSync(path)) return [];
+  return JSON.parse(readFileSync(path, "utf8")).map(({ slug, lang, publishedAt, updatedAt }) => ({
+    slug, lang, publishedAt, updatedAt,
+  }));
+}
+
+// The article <url> blocks already in public/sitemap.xml, kept when Supabase can't be read.
+function existingPostEntries() {
+  const path = resolve(root, "public/sitemap.xml");
+  if (!existsSync(path)) return [];
+  const blocks = readFileSync(path, "utf8").match(/  <url>[\s\S]*?<\/url>/g) ?? [];
+  return blocks.filter((b) => /<loc>[^<]*\/(blog|bidai\/jurnal)\/[^<]+<\/loc>/.test(b));
+}
+
 async function fetchPosts(env) {
   const url = env.VITE_SUPABASE_URL;
   const key = env.VITE_SUPABASE_PUBLISHABLE_DEFAULT_KEY || env.VITE_SUPABASE_ANON_KEY;
@@ -175,6 +192,12 @@ async function main() {
     console.warn("[sitemap] 抓取文章出错，跳过文章部分:", e.message);
   }
 
+  const local = localPosts();
+  if (posts) {
+    const seen = new Set(posts.map((r) => `${r.lang || "en"}:${r.slug}`));
+    posts = [...posts, ...local.filter((r) => !seen.has(`${r.lang}:${r.slug}`))];
+  }
+
   if (posts) {
     // 按 slug 分组，找出每个 slug 有哪些语言版本
     const bySlug = new Map();
@@ -204,6 +227,14 @@ async function main() {
     // 抓不到文章就沿用现有的文章 URL，别让这次构建把它们从 sitemap 里删掉。
     const kept = existingPostEntries();
     if (kept.length) entries.push(...kept);
+    for (const r of local) {
+      const loc = r.lang === "ms" ? `/bidai/jurnal/${r.slug}` : `/blog/${r.slug}`;
+      if (kept.some((e) => e.includes(`<loc>${SITE}${loc}</loc>`))) continue;
+      entries.push(urlEntry({
+        loc, en: r.lang === "ms" ? null : loc, ms: r.lang === "ms" ? loc : null, xDefault: loc,
+        changefreq: "monthly", priority: "0.6", lastmod: isoDate(r),
+      }));
+    }
     console.warn(
       `[sitemap] Supabase 不可用，保留现有 ${kept.length} 个文章 URL`,
     );

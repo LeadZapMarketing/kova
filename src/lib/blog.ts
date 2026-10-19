@@ -1,4 +1,29 @@
 import { supabase } from "./supabase";
+import localPostMeta from "@/content/posts/local-posts.json";
+
+/*
+ * Posts kept in the repo (src/content/posts): the site's Supabase key is
+ * read-only, so the SEO guides LeadZap writes ship with the code instead.
+ * Metadata is small and bundled; each body is its own lazy chunk, loaded
+ * only when that article is rendered. scripts/generate-sitemap.mjs reads
+ * the same JSON, so these posts also land in the sitemap.
+ */
+const localBodies = import.meta.glob("../content/posts/*.html", { query: "?raw", import: "default" }) as Record<
+  string,
+  () => Promise<string>
+>;
+const localPosts = localPostMeta as Array<Omit<BlogPost, "content"> & { slug: string; lang: string }>;
+
+async function getLocalPost(slug: string, lang: string): Promise<BlogPost | null> {
+  const meta = localPosts.find((p) => p.slug === slug && p.lang === lang);
+  const load = meta && localBodies[`../content/posts/${slug}.html`];
+  if (!meta || !load) return null;
+  return { ...meta, content: await load() };
+}
+
+function byPublishedDesc(a: BlogPostSummary, b: BlogPostSummary) {
+  return (b.publishedAt ?? "").localeCompare(a.publishedAt ?? "");
+}
 
 export type BlogCategory = "All" | "设计知识" | "项目故事";
 
@@ -25,6 +50,13 @@ export type BlogPostSummary = Omit<BlogPost, "content">;
  * 获取特定语言、已发布的文章（按发布时间倒序）
  */
 export async function listPosts(category: BlogCategory = "All", lang: string = "en"): Promise<BlogPostSummary[]> {
+  const local = localPosts.filter((p) => p.lang === lang);
+  const remote = await listRemotePosts(category, lang);
+  const seen = new Set(remote.map((p) => p.slug));
+  return [...remote, ...local.filter((p) => !seen.has(p.slug))].sort(byPublishedDesc);
+}
+
+async function listRemotePosts(_category: BlogCategory, lang: string): Promise<BlogPostSummary[]> {
   if (!supabase) {
     console.warn("[blog] Supabase 客户端未初始化");
     return [];
@@ -72,6 +104,8 @@ export async function listPosts(category: BlogCategory = "All", lang: string = "
  */
 // lib/blog.ts 临时修改
 export async function getPost(slug: string, lang: string = "en"): Promise<BlogPost | null> {
+  const local = await getLocalPost(slug, lang);
+  if (local) return local;
   if (!supabase) return null;
 
   // 这里只保留最核心的两个维度：slug 和 lang
@@ -101,17 +135,20 @@ export async function getPost(slug: string, lang: string = "en"): Promise<BlogPo
 let slugCache: Promise<Array<{ slug: string; lang: string }>> | null = null;
 export function listPostPaths(): Promise<Array<{ slug: string; lang: string }>> {
   if (slugCache) return slugCache;
+  const local = localPosts.map((p) => ({ slug: p.slug, lang: p.lang }));
   slugCache = (async () => {
-    if (!supabase) return [];
+    if (!supabase) return local;
     const { data, error } = await supabase
       .from("KovaTable")
       .select("slug, lang")
       .not("slug", "is", null);
     if (error) {
       console.warn("[blog] listPostPaths 失败:", error.message);
-      return [];
+      return local;
     }
-    return (data ?? []).filter((r) => r.slug) as Array<{ slug: string; lang: string }>;
+    const remote = (data ?? []).filter((r) => r.slug) as Array<{ slug: string; lang: string }>;
+    const seen = new Set(remote.map((r) => `${r.lang}:${r.slug}`));
+    return [...remote, ...local.filter((r) => !seen.has(`${r.lang}:${r.slug}`))];
   })();
   return slugCache;
 }

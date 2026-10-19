@@ -31,6 +31,11 @@ export interface BlogSeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
+  "how-to-clean-blinds": {
+    title: "How to Clean Blinds: Roller, Venetian & Sheer | Kova",
+    description:
+      "How to clean blinds without damage: weekly dusting, spot-cleaning fabric, wiping aluminium and wood slats, and keeping blinds fresh in Malaysian humidity.",
+  },
   "zebra-blinds-vs-roller-blinds": {
     title: "Zebra Blinds vs Roller Blinds: Which Is Better? | Kova",
     description:
