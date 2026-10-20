@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Reveal } from "./Reveal";
 import { useT } from "@/lib/i18n";
 
@@ -6,9 +6,9 @@ import { useT } from "@/lib/i18n";
  * Visible FAQ block — answers the questions Malaysian customers actually
  * ask before they fill out the form (price band, on-site measure, lead
  * time, motorisation, blind-type fit). Doubles as FAQPage structured
- * data: a sibling <script type="application/ld+json"> is mounted in
- * sync with the content so Google can lift the answers into AI Overviews
- * and rich snippets.
+ * data: an inline <script type="application/ld+json"> is rendered with
+ * the content (so it is in the prerendered HTML) and Google can lift the
+ * answers into AI Overviews and rich snippets.
  *
  * The visible copy and the schema have to match exactly — Google policy.
  * We render both from the same i18n source so they can never drift.
@@ -18,34 +18,22 @@ export function FaqSection() {
   const faq = t.faq;
   const [open, setOpen] = useState<number | null>(0);
 
-  // Emit FAQPage JSON-LD alongside the visible content.
-  useEffect(() => {
-    const payload = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faq.items.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: { "@type": "Answer", text: item.a },
-      })),
-    };
-    let el = document.head.querySelector(
-      'script[type="application/ld+json"][data-jsonld="faq"]',
-    );
-    if (!el) {
-      el = document.createElement("script");
-      el.setAttribute("type", "application/ld+json");
-      el.setAttribute("data-jsonld", "faq");
-      document.head.appendChild(el);
-    }
-    el.textContent = JSON.stringify(payload);
-    return () => {
-      el?.remove();
-    };
-  }, [faq]);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
 
   return (
     <section className="fluid-section-y border-t border-[var(--color-line)]">
+      {/* Inline so the answers ship in the prerendered HTML (the old
+          useEffect version only existed after hydration, so crawlers that
+          read the raw response never saw it). Same pattern as product Faq. */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-7 lg:gap-16">
           <div className="lg:col-span-4">

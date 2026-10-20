@@ -105,7 +105,7 @@ export const ms: Dict = {
     // H1 kekal pada "bidai" — istilah itu yang membawa trafik carian BM.
     titleA: "Bidai Tingkap Malaysia,",
     titleB: "Terus Dari Kilang Kami",
-    body: "Bidai Roller, Venetian dan VertiSheer dibuat ikut ukuran — diukur, dibuat dan dipasang sendiri oleh Kova. Harga terus dari kilang, tanpa caj tambahan bilik pameran.",
+    body: "Bidai tingkap Roller, Venetian dan VertiSheer dibuat ikut ukuran — diukur, dibuat dan dipasang sendiri oleh Kova. Harga terus dari kilang, tanpa caj tambahan bilik pameran.",
     ctaA: "Dapatkan sebut harga terus dari kilang",
     ctaB: "Tempah pengukuran percuma",
     figureLabel: "Roller, VertiSheer dan Venetian dalam satu ruang tamu — Klang Valley",
