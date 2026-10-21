@@ -31,6 +31,12 @@ export interface BlogSeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
+  "langsir-blackout-atau-bidai-blackout": {
+    title: "Langsir Blackout atau Bidai Blackout? Mana Lebih Gelap | Kova",
+    description:
+      "Langsir blackout atau bidai roller blackout untuk bilik tidur? Di mana cahaya masih masuk, pemasangan dalam atau luar, dan cara dapatkan bilik yang gelap.",
+    h1: "Langsir Blackout atau Bidai Blackout: Mana Lebih Gelap untuk Bilik Tidur?",
+  },
   "how-to-clean-blinds": {
     title: "How to Clean Blinds: Roller, Venetian & Sheer | Kova",
     description:
