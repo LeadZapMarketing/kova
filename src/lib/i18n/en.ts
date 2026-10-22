@@ -1060,7 +1060,7 @@ export const en = {
       subhead: "Control the light. Shape the atmosphere.",
       heroBody: [
         "Kova Venetian blinds use adjustable horizontal slats to give you precise control over sunlight, glare and privacy through the day. Tilt them open for daylight, angle them to soften harsh afternoon sun, close them when you want privacy.",
-        "With clean horizontal lines and a choice of aluminium and timber finishes, they work especially well in modern Malaysian homes, kitchens, home offices and commercial spaces. Every blind is made to measure and installed by our own team.",
+        "Aluminium or wooden venetian blinds? Choose aluminium for slim slats that wipe clean in a kitchen or office; choose wooden blinds, in timber or faux-timber, for wider slats and a warmer living room or study. Every blind is made to measure and installed by our own team.",
       ],
       heroCaption:
         "Timber venetian in Mahogany Teak, slats tilted to roughly 40° — enough to cut the glare and keep the room lit.",
@@ -1406,6 +1406,10 @@ export const en = {
           {
             q: "Aluminium or wood venetian blinds — which is better?",
             a: "It depends on the room. Aluminium for a clean, modern, easy-maintenance solution. Timber when you want warmth, texture and a more decorative appearance.",
+          },
+          {
+            q: "Do you make wooden blinds?",
+            a: "Yes. Our wooden venetian blinds come in timber and faux-timber, with wider slats than aluminium for a warmer, more decorative look. They suit living rooms, studies and meeting rooms; for a kitchen or another humid spot we usually recommend aluminium instead.",
           },
           {
             q: "Are venetian blinds good for kitchens?",

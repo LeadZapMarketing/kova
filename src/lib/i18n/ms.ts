@@ -1037,7 +1037,7 @@ export const ms: Dict = {
       subhead: "Kawal cahaya. Bentuk suasana.",
       heroBody: [
         "Bidai Venetian Kova guna bilah mendatar yang boleh dilaras untuk beri anda kawalan tepat ke atas cahaya matahari, silau dan privasi sepanjang hari. Miringkan terbuka untuk cahaya siang, laras sudutnya untuk lembutkan matahari petang yang terik, tutup bila anda mahu privasi.",
-        "Dengan garis mendatar yang kemas dan pilihan kemasan aluminium serta kayu, ia sangat sesuai untuk rumah moden Malaysia, dapur, pejabat rumah dan ruang komersial. Setiap bidai dibuat ikut ukuran dan dipasang oleh pasukan kami sendiri.",
+        "Bidai aluminium atau bidai kayu? Pilih aluminium untuk bilah nipis yang senang dilap di dapur atau pejabat; pilih bidai kayu, dalam kayu atau kayu tiruan, untuk bilah lebih lebar dan ruang tamu atau bilik bacaan yang lebih hangat. Setiap bidai dibuat ikut ukuran dan dipasang oleh pasukan kami sendiri.",
       ],
       heroCaption:
         "Venetian kayu dalam Mahogany Teak, bilah dimiringkan lebih kurang 40° — cukup untuk potong silau dan biar bilik kekal terang.",
@@ -1384,6 +1384,10 @@ export const ms: Dict = {
           {
             q: "Bidai venetian aluminium atau kayu — mana lebih baik?",
             a: "Bergantung pada bilik. Aluminium untuk penyelesaian yang bersih, moden dan senang dijaga. Kayu bila anda mahu kehangatan, tekstur dan rupa yang lebih dekoratif.",
+          },
+          {
+            q: "Ada bidai kayu?",
+            a: "Ada. Bidai venetian kayu kami datang dalam kayu dan kayu tiruan, dengan bilah lebih lebar daripada aluminium untuk rupa yang lebih hangat dan dekoratif. Ia sesuai untuk ruang tamu, bilik bacaan dan bilik mesyuarat; untuk dapur atau tempat yang lembap, kami biasanya cadangkan aluminium.",
           },
           {
             q: "Adakah bidai venetian sesuai untuk dapur?",

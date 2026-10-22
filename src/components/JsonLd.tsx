@@ -126,10 +126,9 @@ export function JsonLd() {
       { "@type": "AdministrativeArea", name: "Selangor" },
     ],
     availableLanguage: ["en", "ms"],
+    // Quote-only: the Offer points to the quote page and states no price.
     offers: {
       "@type": "Offer",
-      priceCurrency: "MYR",
-      price: "0.00",
       url: `${SITE_URL}${isMalay ? "/bidai/hubungi" : "/contact"}`,
     },
   };
@@ -151,6 +150,9 @@ export function JsonLd() {
         category: "Window Blinds",
         description: t.products.venetian.body[0],
         image: `${SITE_URL}/showcase/white-venetian.webp`,
+        material: isMalay
+          ? ["Aluminium", "Kayu", "Kayu tiruan"]
+          : ["Aluminium", "Wood", "Faux wood"],
       },
       vertisheer: {
         name: "VertiSheer",
@@ -166,14 +168,7 @@ export function JsonLd() {
       brand: { "@type": "Brand", name: "Kova Sun Shade" },
       url: `${SITE_URL}${pathname}`,
       areaServed: "Klang Valley, Malaysia",
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock",
-        priceCurrency: "MYR",
-        price: "0.00",
-        url: `${SITE_URL}${isMalay ? "/bidai/hubungi" : "/contact"}`,
-        seller: { "@id": `${SITE_URL}/#business` },
-      },
+      // Quote-only business: no Offer, because a "0.00" price reads as free.
     };
   }
 
