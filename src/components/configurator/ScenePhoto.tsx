@@ -15,12 +15,17 @@ export function ScenePhoto({
   className,
   preload = [],
   onError,
+  eager = false,
 }: {
   src: string;
   alt: string;
   className?: string;
   preload?: string[];
   onError?: () => void;
+  /** Only where the photo is the first screen (/configurator). Elsewhere it
+   *  sits below the fold and loads lazily, so it does not compete with the
+   *  page's hero photo on phones. */
+  eager?: boolean;
 }) {
   const [activeSrc, setActiveSrc] = useState(src);
   const [fadingSrc, setFadingSrc] = useState<string | null>(null);
@@ -86,6 +91,9 @@ export function ScenePhoto({
         key={`active-${activeSrc}`}
         src={activeSrc}
         alt={alt}
+        loading={eager ? "eager" : "lazy"}
+        width={1100}
+        height={880}
         className="relative block w-full h-auto object-cover animate-fade-in"
         draggable={false}
       />

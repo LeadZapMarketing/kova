@@ -116,6 +116,7 @@ export function Configurator({ headingLevel: H = "h2" }: { headingLevel?: "h1" |
                   alt={`${t.configurator.products[product]} — ${fabric.name}`}
                   preload={shouldPreload ? sceneUrls : []} 
                   onError={() => setPhotoFailed(true)}
+                  eager={H === "h1"}
                   className="w-full max-h-[38vh] sm:max-h-[60vh] lg:max-h-[calc(100vh-14rem)] overflow-hidden"
                 />
               ) : (

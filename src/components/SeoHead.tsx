@@ -60,7 +60,9 @@ export function SeoHead() {
   // --- 🌟 新增：动态首屏图片预加载映射 (Issue 3 修复) ---
   // 根据不同的页面，预加载不同的核心大图 (LCP)，提升首屏加载分数
   const PRELOAD_IMAGES: Partial<Record<keyof typeof PAGE_KEY_FALLBACK, string>> = {
-    home: "/showcase/hero-living.webp",
+    // home: not here. The hero <img> (fetchpriority high + srcset) already gets
+    // a size-matched preload; a plain href here made phones fetch the 1400px
+    // copy as well, competing with the photo they actually show.
     roller: "/showcase/greige-roller.webp",
     // 如果你有其他页面的首屏大图，强烈建议在这里补齐，例如：
     // venetian: "/showcase/venetian-hero.webp",

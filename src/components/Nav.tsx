@@ -3,7 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { useT } from "@/lib/i18n";
 import { LanguageToggle } from "./LanguageToggle";
 import { PROMO_RESIZE_EVENT } from "./PromoBar";
-import kovaLogo from "@/images/KoveraLogo.png";
+// 120px copy of the logo (shown at 40px, sharp up to 3x screens); the 781px
+// original weighed 64 KB and competed with the hero photo on phones.
+import kovaLogo from "@/images/KoveraLogo-120.png";
 
 export function Nav() {
   const t = useT();
@@ -118,6 +120,8 @@ export function Nav() {
               <img
                 src={kovaLogo}
                 alt="Kova Logo"
+                width={40}
+                height={40}
                 className="h-full w-full object-contain"
               />
             </span>
