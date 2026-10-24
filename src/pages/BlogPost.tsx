@@ -191,7 +191,7 @@ export function BlogPost() {
                     <figure className="mt-10 lg:mt-14 -mx-5 sm:mx-0">
                       <img
                         src={post.image}
-                        alt={seoOverride?.h1 ?? post.title ?? ""}
+                        alt={seoOverride?.imageAlt ?? seoOverride?.h1 ?? post.title ?? ""}
                         className="w-full aspect-[16/9] object-cover rounded-md border border-[var(--color-line)]"
                       />
                     </figure>

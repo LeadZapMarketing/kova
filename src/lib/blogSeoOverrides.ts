@@ -28,6 +28,8 @@ export interface BlogSeoOverride {
   title: string;
   description: string;
   h1?: string;
+  /** Describes the cover photo itself; falls back to the h1 when unset. */
+  imageAlt?: string;
 }
 
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
@@ -36,6 +38,13 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
     description:
       "Langsir blackout atau bidai roller blackout untuk bilik tidur? Di mana cahaya masih masuk, pemasangan dalam atau luar, dan cara dapatkan bilik yang gelap.",
     h1: "Langsir Blackout atau Bidai Blackout: Mana Lebih Gelap untuk Bilik Tidur?",
+  },
+  "motorised-blinds-guide": {
+    title: "Motorised Blinds: Battery, Wired & When It's Worth It | Kova",
+    description:
+      "Motorised blinds explained: battery or wired, HomeKit control, child safety and which windows really need a motor, for roller, Venetian and VertiSheer.",
+    h1: "Motorised Blinds: How They Work and When They Are Worth It",
+    imageAlt: "Kova VertiSheer vertical sheer blinds in Pivot Anchor",
   },
   "how-to-clean-blinds": {
     title: "How to Clean Blinds: Roller, Venetian & Sheer | Kova",

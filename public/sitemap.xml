@@ -237,4 +237,13 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://kovasunshade.com/blog/motorised-blinds-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kovasunshade.com/blog/motorised-blinds-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kovasunshade.com/blog/motorised-blinds-guide"/>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
