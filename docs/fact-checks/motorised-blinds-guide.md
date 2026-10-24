@@ -32,7 +32,7 @@
 | 15 | Looped cords and chains are a strangulation risk for babies and young children | CPSC: "Children have strangled to death on the cords of window blinds, shades, draperies and other window coverings" https://www.cpsc.gov/gocordless ; RoSPA blind cords campaign https://www.rospa.com/campaigns-fundraising/Current/Blind-cord |
 | 16 | CPSC: the safest option when young children are present is to go cordless | CPSC: "The safest option when young children are present is to go cordless." https://www.cpsc.gov/gocordless |
 | 17 | RoSPA: choose a cordless model, or secure cords on a cleat at least 1.5 m from the floor | RoSPA: "consider choosing a cordless model"; "Install cleats at least 1.5 metres from the ground" https://www.rospa.com/campaigns-fundraising/Current/Blind-cord |
-| 18 | RoSPA advises never fitting a blind with a looped cord or chain in a child's bedroom. A motorised blind has no operating cord or chain hanging down. (The earlier clause "one reason parents choose it for children's rooms" is cut: no source.) | RoSPA: "never fitting a blind with a looped cord or chain in a child's bedroom" https://www.rospa.com/campaigns-fundraising/Current/Blind-cord ; Kova roller page en.ts 943 (motor replaces the chain); Somfy WireFree (battery motor, no cable) |
+| 18 | RoSPA advises never fitting a blind with a looped cord or chain in a child's bedroom. A motorised blind has no operating cord or chain hanging down. (The earlier clause "one reason parents choose it for children's rooms" is cut: no source.) | RoSPA: "Never fit a blind with a looped cord or chain in your child's bedroom" (the guide words this as advice in its own words) https://www.rospa.com/campaigns-fundraising/Current/Blind-cord ; Kova roller page en.ts 943 (motor replaces the chain); Somfy WireFree (battery motor, no cable) |
 | 19 | Kova makes the three lines to measure across the Klang Valley, factory-direct | Kova site meta en.ts 27, 37; homepage copy |
 | 20 | WhatsApp +60 12-676 2409 / contact page | Kova live site contact number (same link as guides 1 and 2) |
 
@@ -43,4 +43,11 @@ Sources are also listed at the end of the guide.
   - ✗ 18: "one reason parents choose it for children's rooms" had no source. Fixed: replaced with RoSPA's line (never a looped cord or chain in a child's bedroom); the unsourced clause is cut.
   - ✗ Image alt repeated the H1, but the photo shows a Pivot Anchor VertiSheer that is not shown to be motorised. Fixed: alt now describes the photo ("Kova VertiSheer vertical sheer blinds in Pivot Anchor"), on the article and on the /blog card.
   - ✓ 1-17, 19, 20, title, meta description, excerpt, organisation byline, no prices (Chief's ✓ lines, round 1). Note for 13: cite en.ts 1025 ("access to power") as the main source.
-- Round 2: asked.
+- Round 2 (24 Oct 2026): PASS.
+  - ✓ 18: the unsourced reason is gone (draft and built page); the new line matches RoSPA ("Never fit a blind with a looped cord or chain in your child's bedroom"); "no operating cord or chain" still backed by en.ts 943 and Somfy WireFree.
+  - ✓ Image alt: built page shows "Kova VertiSheer vertical sheer blinds in Pivot Anchor"; the photo is the Pivot Anchor VertiSheer (data.ts 187/211); article and /blog card read the new field, other posts keep their H1.
+  - ✓ 13: claim list points first to en.ts 1025.
+  - ✓ 1-12, 14-17, 19-20, title, meta description, excerpt, organisation byline (round-1 checks stand; only paragraph 18 changed).
+  - Tidy-up done: RoSPA quote in the claim list now uses RoSPA's exact words.
+
+Checked by Chief of Staff 2026-10-24: PASS
