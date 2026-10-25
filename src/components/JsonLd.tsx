@@ -289,6 +289,7 @@ export function buildArticleJsonLd(
     image?: string;
     author?: string;
     publishedAt?: string;
+    updatedAt?: string;
     slug?: string;
   },
   pathname: string,
@@ -301,7 +302,7 @@ export function buildArticleJsonLd(
     description: post.excerpt ?? post.title,
     image: post.image ? [post.image] : undefined,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: lang === "ms" ? "ms-MY" : "en-MY",
     author: { "@type": "Organization", name: post.author ?? "Kova Sun Shade" },
     publisher: { "@id": `${SITE_URL}/#business` },

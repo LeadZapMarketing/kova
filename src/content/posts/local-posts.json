@@ -37,5 +37,18 @@
     "createdAt": "2026-10-24T14:16:00.000Z",
     "publishedAt": "2026-10-24T14:16:00.000Z",
     "updatedAt": "2026-10-24T14:16:00.000Z"
+  },
+  {
+    "id": "local-zebra-blinds-vs-roller-blinds",
+    "slug": "zebra-blinds-vs-roller-blinds",
+    "lang": "en",
+    "title": "Zebra Blinds vs Roller Blinds: Which Blinds Are Most Suitable for Your Lifestyle?",
+    "excerpt": "Zebra or roller blinds? We compare light control, privacy, blackout, heat, cleaning, cost and child safety, then match the right blind to each room.",
+    "image": "https://cchxoycyanozttgqddxn.supabase.co/storage/v1/object/public/tectone-image/blog-covers/1785743794871-43d0jv7kw2m.webp",
+    "author": "Kova Sun Shade",
+    "tags": "Blind guides",
+    "createdAt": "2026-08-02T12:00:00.000Z",
+    "publishedAt": "2026-08-02T12:00:00.000Z",
+    "updatedAt": "2026-10-26T00:00:00.000Z"
   }
 ]

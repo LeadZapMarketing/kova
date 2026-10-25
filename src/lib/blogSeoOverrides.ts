@@ -54,8 +54,9 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
   "zebra-blinds-vs-roller-blinds": {
     title: "Zebra Blinds vs Roller Blinds: Which Is Better? | Kova",
     description:
-      "Zebra or roller blinds? We compare light control, privacy, blackout, heat, cleaning, price and child safety, then match the right blind to each room.",
+      "Zebra blinds vs roller blinds: light control, privacy, blackout, heat, cleaning, cost and child safety compared, plus the right blind for each room.",
     h1: "Zebra Blinds vs Roller Blinds: Which Blinds Are Most Suitable for Your Lifestyle?",
+    imageAlt: "Grey zebra blind beside a plain roller blind, with icons for light control, privacy, blackout, maintenance, price and design",
   },
   "roller-blinds-for-your-house": {
     title: "Roller Blinds for Malaysian Homes: A Complete Guide | Kova",
