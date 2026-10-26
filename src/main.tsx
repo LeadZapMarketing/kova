@@ -8,7 +8,6 @@ import { Home } from './pages/Home';
 import './index.css';
 // Sends any enquiry backup a closed tab left behind (see lib/enquiry).
 import './lib/enquiry';
-import { getPost, listPostPaths } from './lib/blog';
 
 // --- 博客文章预渲染（SSG）---
 // loader 在构建期抓取文章内容，让每篇文章的 HTML 直接包含正文（Google 无需跑 JS 就能读到）。
@@ -16,11 +15,16 @@ import { getPost, listPostPaths } from './lib/blog';
 const blogPostLoader = (lang: 'en' | 'ms') =>
   async ({ params }: LoaderFunctionArgs) => {
     if (!params.slug) return null;
+    // Loaded only when a post is opened: lib/blog pulls in the Supabase
+    // client, which would otherwise sit in every page's first script
+    // (about a third of it) and hold back the homepage on phones.
+    const { getPost } = await import('./lib/blog');
     return await getPost(params.slug, lang);
   };
 
 // getStaticPaths 告诉 vite-react-ssg 要为哪些 slug 生成静态页面
 const blogStaticPaths = (lang: 'en' | 'ms', prefix: string) => async () => {
+  const { listPostPaths } = await import('./lib/blog');
   const rows = await listPostPaths();
   return rows.filter((r) => r.lang === lang).map((r) => `${prefix}/${r.slug}`);
 };
