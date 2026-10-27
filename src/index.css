@@ -293,3 +293,45 @@
   background-color: transparent;
   border-color: transparent;
 }
+/*
+ * Homepage (/ and /bidai): the sections below the first screen skip layout
+ * and paint until they come near the view. On phones the whole long page was
+ * laid out again with every piece of HTML that arrived and with every font
+ * swap, and that work held back the hero photo's paint.
+ * The sizes are each section's measured inner height (phone, tablet,
+ * desktop) so the scroll bar and the #collection / #configurator jumps land
+ * where they did before; "auto" keeps the real size once a section has been
+ * shown. Order follows Home.tsx: 1 Hero, 2 Marquee, 3 Philosophy,
+ * 4 Collection, 5 FactoryDirect, 6 Fabrics, 7 Configurator, 8 FAQ, then the
+ * footer.
+ */
+.home-cv > section:nth-child(n + 3),
+.home-cv + footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+.home-cv > section:nth-child(3) { contain-intrinsic-size: auto 1189px; }
+.home-cv > section:nth-child(4) { contain-intrinsic-size: auto 2059px; }
+.home-cv > section:nth-child(5) { contain-intrinsic-size: auto 1066px; }
+.home-cv > section:nth-child(6) { contain-intrinsic-size: auto 396px; }
+.home-cv > section:nth-child(7) { contain-intrinsic-size: auto 590px; }
+.home-cv > section:nth-child(8) { contain-intrinsic-size: auto 776px; }
+.home-cv + footer { contain-intrinsic-size: auto 600px; }
+@media (min-width: 768px) {
+  .home-cv > section:nth-child(3) { contain-intrinsic-size: auto 1432px; }
+  .home-cv > section:nth-child(4) { contain-intrinsic-size: auto 738px; }
+  .home-cv > section:nth-child(5) { contain-intrinsic-size: auto 1006px; }
+  .home-cv > section:nth-child(6) { contain-intrinsic-size: auto 435px; }
+  .home-cv > section:nth-child(7) { contain-intrinsic-size: auto 1124px; }
+  .home-cv > section:nth-child(8) { contain-intrinsic-size: auto 696px; }
+  .home-cv + footer { contain-intrinsic-size: auto 405px; }
+}
+@media (min-width: 1024px) {
+  .home-cv > section:nth-child(3) { contain-intrinsic-size: auto 707px; }
+  .home-cv > section:nth-child(4) { contain-intrinsic-size: auto 869px; }
+  .home-cv > section:nth-child(5) { contain-intrinsic-size: auto 889px; }
+  .home-cv > section:nth-child(6) { contain-intrinsic-size: auto 377px; }
+  .home-cv > section:nth-child(7) { contain-intrinsic-size: auto 740px; }
+  .home-cv > section:nth-child(8) { contain-intrinsic-size: auto 596px; }
+  .home-cv + footer { contain-intrinsic-size: auto 352px; }
+}

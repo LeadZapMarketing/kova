@@ -31,7 +31,7 @@ export function Home() {
     <div className="min-h-screen bg-[var(--color-cream)]">
       <PromoBar />
       <Nav />
-      <main id="main">
+      <main id="main" className="home-cv">
         <Hero />
         <Marquee />
         <Philosophy />
