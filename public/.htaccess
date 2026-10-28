@@ -152,6 +152,9 @@ DirectorySlash Off
   AddType application/manifest+json .webmanifest
 </IfModule>
 
+# --- Character set: pages are UTF-8 (say so in the header too) --
+AddDefaultCharset UTF-8
+
 # --- Custom error fallback --------------------------------------
 # Points at the real prerendered 404 page (dist/404/index.html — see the
 # '404' route in main.tsx), not the homepage, so a genuine 404 status
