@@ -246,4 +246,13 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://kovasunshade.com/bidai/jurnal/cara-pasang-bidai-tingkap</loc>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://kovasunshade.com/bidai/jurnal/cara-pasang-bidai-tingkap"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kovasunshade.com/bidai/jurnal/cara-pasang-bidai-tingkap"/>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

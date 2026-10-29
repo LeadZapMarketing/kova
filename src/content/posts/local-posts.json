@@ -50,5 +50,18 @@
     "createdAt": "2026-08-02T12:00:00.000Z",
     "publishedAt": "2026-08-02T12:00:00.000Z",
     "updatedAt": "2026-10-26T00:00:00.000Z"
+  },
+  {
+    "id": "local-cara-pasang-bidai-tingkap",
+    "slug": "cara-pasang-bidai-tingkap",
+    "lang": "ms",
+    "title": "Cara Pasang Bidai Tingkap: Apa yang Perlu Tahu Sebelum Pasang",
+    "excerpt": "Langkah memasang bidai tingkap: pemasangan dalam atau luar, mengukur, menggerudi dengan selamat, alat keselamatan tali, dan bila lebih baik guna pemasang bidai.",
+    "image": "https://kovasunshade.com/showcase/white-venetian-800.webp",
+    "author": "Kova Sun Shade",
+    "tags": "Panduan bidai",
+    "createdAt": "2026-10-29T18:02:00.000Z",
+    "publishedAt": "2026-10-29T18:02:00.000Z",
+    "updatedAt": "2026-10-29T18:02:00.000Z"
   }
 ]

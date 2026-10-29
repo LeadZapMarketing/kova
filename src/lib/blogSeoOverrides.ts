@@ -39,6 +39,13 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
       "Langsir blackout atau bidai roller blackout untuk bilik tidur? Di mana cahaya masih masuk, pemasangan dalam atau luar, dan cara dapatkan bilik yang gelap.",
     h1: "Langsir Blackout atau Bidai Blackout: Mana Lebih Gelap untuk Bilik Tidur?",
   },
+  "cara-pasang-bidai-tingkap": {
+    title: "Cara Pasang Bidai Tingkap: Langkah & Tip Keselamatan | Kova",
+    description:
+      "Cara pasang bidai tingkap: dalam atau luar bingkai, mengukur, menggerudi tanpa kena kabel, alat keselamatan tali, dan bila lebih baik guna pemasang.",
+    h1: "Cara Pasang Bidai Tingkap: Apa yang Perlu Tahu Sebelum Pasang",
+    imageAlt: "Bidai Venetian aluminium putih dipasang di dalam ceruk tingkap dapur, di atas singki dan kaunter",
+  },
   "motorised-blinds-guide": {
     title: "Motorised Blinds: Battery, Wired & When It's Worth It | Kova",
     description:
