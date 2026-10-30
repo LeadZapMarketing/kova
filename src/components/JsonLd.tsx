@@ -156,7 +156,7 @@ export function JsonLd() {
       },
       vertisheer: {
         name: "VertiSheer",
-        category: "Vertical Sheer Blinds",
+        category: isMalay ? "Vertical Sheer Blinds" : "Vertical Blinds",
         description: t.products?.vertisheer?.body?.[0] || "Modern vertical sheer blinds.",
         image: `${SITE_URL}/showcase/pivot-silver-vertisheer.webp`,
       },

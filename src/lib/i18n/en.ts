@@ -40,11 +40,11 @@ export const en = {
       },
       vertisheer: {
         title:
-          "VertiSheer Malaysia | Sheer Blinds for Sliding Doors | Kova",
+          "Vertical Blinds Malaysia | VertiSheer Sheer Blinds | Kova",
         description:
-          "VertiSheer vertical sheer blinds for sliding doors and large windows: curtain-soft fabric vanes that rotate for precise light and privacy. Made to measure.",
+          "VertiSheer vertical blinds in soft sheer fabric for sliding doors and large windows: fabric vanes rotate for precise light and privacy. Made to measure.",
         keywords:
-          "vertisheer Malaysia, vertical sheer blinds, sliding door blinds, glass wall blinds, langsir tingkap besar, Pivot, Klang Valley",
+          "vertical blinds Malaysia, vertisheer Malaysia, vertical sheer blinds, sliding door blinds, glass wall blinds, langsir tingkap besar, Pivot, Klang Valley",
       },
       process: {
         // This page explains why Kova is cheaper — it should own
@@ -1462,7 +1462,7 @@ export const en = {
       h1: "VertiSheer Blinds Malaysia",
       subhead: "The softness of curtains. The control of blinds.",
       heroBody: [
-        "Kova VertiSheer combines soft sheer fabric with adjustable vertical vanes, giving you flexible control over daylight, privacy and your outside view — all within one clean window system.",
+        "Kova VertiSheer is a vertical sheer blind: soft sheer fabric with adjustable vertical vanes, giving you flexible control over daylight, privacy and your outside view — all within one clean window system.",
         "Designed especially for large windows, sliding doors and glass walls, it creates a softer, more elegant look than conventional vertical blinds while keeping the space light and easy to use. Every system is made to measure and installed by our own team.",
       ],
       heroCaption:
@@ -1765,7 +1765,7 @@ export const en = {
         items: [
           {
             q: "What are VertiSheer blinds?",
-            a: "A vertical window covering that combines soft sheer fabric with adjustable fabric vanes. The vanes rotate to change the balance between natural daylight, outside visibility and privacy.",
+            a: "A vertical sheer blind: a vertical window covering that combines soft sheer fabric with adjustable fabric vanes. The vanes rotate to change the balance between natural daylight, outside visibility and privacy.",
           },
           {
             q: "What's the difference between VertiSheer and vertical blinds?",
