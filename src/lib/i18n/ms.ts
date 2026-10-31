@@ -39,11 +39,11 @@ export const ms: Dict = {
       },
       vertisheer: {
         title:
-          "Bidai VertiSheer Malaysia | Untuk Pintu Gelangsar | Kova",
+          "Bidai Pintu Gelongsor & Vertical Blind | VertiSheer | Kova",
         description:
-          "VertiSheer untuk tingkap besar dan pintu gelangsar: lembut seperti langsir, dengan bilah kain yang boleh diputar untuk kawal cahaya. Dibuat ikut ukuran.",
+          "Bidai pintu gelongsor dan tingkap besar: VertiSheer ialah vertical blind kain sheer, lembut seperti langsir, bilahnya diputar untuk kawal cahaya. Ikut ukuran.",
         keywords:
-          "vertisheer Malaysia, bidai sheer menegak, bidai pintu gelongsor, bidai dinding kaca, langsir tingkap besar, Pivot, Lembah Klang",
+          "bidai pintu, bidai pintu gelongsor, vertical blind, bidai menegak, vertisheer Malaysia, bidai sheer menegak, bidai dinding kaca, langsir tingkap besar, Pivot, Lembah Klang",
       },
       process: {
         title:
@@ -1440,7 +1440,7 @@ export const ms: Dict = {
       h1: "Bidai VertiSheer Malaysia",
       subhead: "Kelembutan langsir. Kawalan bidai.",
       heroBody: [
-        "Kova VertiSheer gabungkan kain sheer yang lembut dengan bilah menegak yang boleh dilaras, memberi anda kawalan fleksibel ke atas cahaya siang, privasi dan pemandangan luar — semuanya dalam satu sistem tingkap yang kemas.",
+        "Kova VertiSheer ialah bidai menegak (vertical blind) sheer untuk pintu gelongsor dan tingkap besar: kain sheer yang lembut dengan bilah menegak yang boleh dilaras, memberi anda kawalan fleksibel ke atas cahaya siang, privasi dan pemandangan luar — semuanya dalam satu sistem tingkap yang kemas.",
         "Direka khas untuk tingkap besar, pintu gelongsor dan dinding kaca, ia beri rupa yang lebih lembut dan anggun berbanding bidai menegak biasa sambil ruang kekal cerah dan senang digunakan. Setiap sistem dibuat ikut ukuran dan dipasang oleh pasukan kami sendiri.",
       ],
       heroCaption:
@@ -1746,7 +1746,7 @@ export const ms: Dict = {
         items: [
           {
             q: "Apa itu bidai VertiSheer?",
-            a: "Penutup tingkap menegak yang gabungkan kain sheer yang lembut dengan bilah kain yang boleh dilaras. Bilah berputar untuk ubah imbangan antara cahaya siang semula jadi, pandangan ke luar dan privasi.",
+            a: "Bidai menegak (vertical blind) sheer: penutup tingkap menegak yang gabungkan kain sheer yang lembut dengan bilah kain yang boleh dilaras. Bilah berputar untuk ubah imbangan antara cahaya siang semula jadi, pandangan ke luar dan privasi.",
           },
           {
             q: "Apa beza VertiSheer dengan bidai menegak biasa?",
