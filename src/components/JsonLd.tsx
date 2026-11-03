@@ -141,7 +141,7 @@ export function JsonLd() {
     const meta = {
       roller: {
         name: isMalay ? "Bidai Roller" : "Roller Blinds",
-        category: "Window Blinds",
+        category: isMalay ? "Window Blinds" : "Roller Blinds (Roller Shades)",
         description: t.products.roller.body[0],
         image: `${SITE_URL}/showcase/greige-roller.webp`,
       },

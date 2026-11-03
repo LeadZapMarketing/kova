@@ -21,12 +21,14 @@ export const en = {
       },
       roller: {
         // Now owns 'roller blinds Malaysia'; fabric types are the modifiers
-        // people actually add to the search.
-        title: "Roller Blinds Malaysia: Blackout & Sunscreen | Kova",
+        // people actually add to the search. 'Roller shades' (170/mo) and
+        // 'blackout roller shades' (260/mo) are the same product under the
+        // US name, and no other page targets them (4 Nov 2026).
+        title: "Roller Blinds & Shades Malaysia: Blackout, Sunscreen | Kova",
         description:
-          "Made-to-measure roller blinds in blackout, dim-out, sunscreen and light-filtering fabrics — up to 40% less than retail. Free on-site measure in Klang Valley.",
+          "Made-to-measure roller blinds and blackout roller shades, plus dim-out and sunscreen fabrics — up to 40% less than retail. Free on-site measure in Klang Valley.",
         keywords:
-          "roller blinds Malaysia, made to measure roller blinds, blackout roller blinds, sunscreen blinds, dim-out blinds, bidai Roller, bidai Roller Malaysia, Cenza, Denver, Shiro, Petaling Jaya",
+          "roller blinds Malaysia, roller shades, blackout roller shades, made to measure roller blinds, blackout roller blinds, sunscreen blinds, dim-out blinds, bidai Roller, bidai Roller Malaysia, Cenza, Denver, Shiro, Petaling Jaya",
       },
       venetian: {
         // Same pattern as /roller: the head term, the two material
@@ -701,7 +703,7 @@ export const en = {
       h1: "Roller Blinds Malaysia",
       subhead: "Clean, practical, made to fit.",
       heroBody: [
-        "Kova roller blinds are made to measure for your windows, with a choice of blackout, dim-out and sunscreen fabrics depending on how much sunlight, privacy and heat control you need.",
+        "Kova roller blinds (also called roller shades) are made to measure for your windows, with a choice of blackout, dim-out and sunscreen fabrics depending on how much sunlight, privacy and heat control you need.",
         "From bedrooms and living rooms to offices and kitchens, roller blinds offer a simple way to control light without making the room feel heavy or cluttered. We design, measure, make and install ours ourselves — a factory-direct solution without the showroom mark-up.",
       ],
       heroCaption:
