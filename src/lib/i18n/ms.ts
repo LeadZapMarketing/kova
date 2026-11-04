@@ -672,6 +672,7 @@ export const ms: Dict = {
       ctaEmail: "info@kovasunshade.com",
       studioLine: "Kova Sun Shade · Petaling Jaya, Malaysia",
       hoursLine: "Isnin–Jumaat, 9 hingga 6 · Sabtu dengan janji temu",
+      guidesLabel: "Panduan berkaitan",
     },
     roller: {
       h1: "Bidai Roller Malaysia",
@@ -970,6 +971,10 @@ export const ms: Dict = {
           },
         ],
       },
+      guides: [
+        { to: "/bidai/jurnal/langsir-blackout-atau-bidai-blackout", title: "Langsir blackout atau bidai blackout?" },
+        { to: "/bidai/jurnal/cara-pasang-bidai-tingkap", title: "Cara pasang bidai tingkap" },
+      ],
       faq: {
         eyebrow: "Soalan lazim bidai roller Malaysia",
         titleA: "Soalan",
@@ -1366,6 +1371,9 @@ export const ms: Dict = {
           },
         ],
       },
+      guides: [
+        { to: "/bidai/jurnal/cara-pasang-bidai-tingkap", title: "Cara pasang bidai tingkap" },
+      ],
       faq: {
         eyebrow: "Soalan lazim bidai venetian Malaysia",
         titleA: "Soalan",
@@ -1741,6 +1749,9 @@ export const ms: Dict = {
           },
         ],
       },
+      guides: [
+        { to: "/bidai/jurnal/cara-pasang-bidai-tingkap", title: "Cara pasang bidai tingkap" },
+      ],
       faq: {
         eyebrow: "Soalan lazim bidai VertiSheer Malaysia",
         titleA: "Soalan",

@@ -698,6 +698,7 @@ export const en = {
       ctaEmail: "info@kovasunshade.com",
       studioLine: "Kova Sun Shade · Petaling Jaya, Malaysia",
       hoursLine: "Mon–Fri, 9 to 6 · Sat by appointment",
+      guidesLabel: "Guides on this",
     },
     roller: {
       h1: "Roller Blinds Malaysia",
@@ -995,6 +996,11 @@ export const en = {
           },
         ],
       },
+      guides: [
+        { to: "/blog/zebra-blinds-vs-roller-blinds", title: "Zebra blinds vs roller blinds" },
+        { to: "/blog/blinds-for-living-room", title: "Blinds for the living room" },
+        { to: "/blog/motorised-blinds-guide", title: "Motorised blinds: when they are worth it" },
+      ],
       faq: {
         eyebrow: "Roller blinds Malaysia FAQ",
         titleA: "Questions",
@@ -1390,6 +1396,10 @@ export const en = {
           },
         ],
       },
+      guides: [
+        { to: "/blog/how-to-clean-blinds", title: "How to clean blinds" },
+        { to: "/blog/blinds-for-living-room", title: "Blinds for the living room" },
+      ],
       faq: {
         eyebrow: "Venetian Blinds Malaysia FAQ",
         titleA: "Questions",
@@ -1762,6 +1772,11 @@ export const en = {
           },
         ],
       },
+      guides: [
+        { to: "/blog/blinds-for-living-room", title: "Blinds for the living room" },
+        { to: "/blog/motorised-blinds-guide", title: "Motorised blinds: when they are worth it" },
+        { to: "/blog/how-to-clean-blinds", title: "How to clean blinds" },
+      ],
       faq: {
         eyebrow: "VertiSheer Blinds Malaysia FAQ",
         titleA: "Questions",

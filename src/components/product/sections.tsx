@@ -637,12 +637,15 @@ export function Care({
  * ------------------------------------------------------------------ */
 
 export function Faq({
-  n, tone = "band", data,
+  n, tone = "band", data, guides = [],
 }: {
   n: string;
   tone?: Tone;
   data: { eyebrow: string; titleA: string; titleB: string; items: { q: string; a: string }[] };
+  /** Journal guides on this product, listed under the questions. */
+  guides?: { to: string; title: string }[];
 }) {
+  const t = useT();
   const [open, setOpen] = useState<number | null>(0);
   const schema = {
     "@context": "https://schema.org",
@@ -672,7 +675,8 @@ export function Faq({
           </Reveal>
         </div>
 
-        <ul className="lg:col-span-8 border-t border-[var(--color-line)]">
+        <div className="lg:col-span-8">
+        <ul className="border-t border-[var(--color-line)]">
           {data.items.map((item, i) => {
             const isOpen = open === i;
             return (
@@ -712,6 +716,24 @@ export function Faq({
             );
           })}
         </ul>
+        {guides.length > 0 && (
+          <div className="mt-6 lg:mt-8">
+            <p className="eyebrow">{t.productPages.common.guidesLabel}</p>
+            <ul className="mt-3 flex flex-col gap-2">
+              {guides.map((g) => (
+                <li key={g.to}>
+                  <Link
+                    to={g.to}
+                    className="font-serif text-[clamp(1rem,0.95rem+0.3vw,1.15rem)] text-[var(--color-ink)] underline decoration-[var(--color-clay)] underline-offset-4 hover:text-[var(--color-clay-deep)] transition-colors"
+                  >
+                    {g.title} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        </div>
       </div>
     </Sec>
   );

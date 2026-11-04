@@ -43,7 +43,7 @@ export function RollerPage() {
         <RollerDesigner n="08" tone="cream" />
         <Motorised n="09" tone="band" data={p.motorised} />
         <Care n="10" tone="cream" data={p.care} />
-        <Faq n="11" tone="band" data={p.faq} />
+        <Faq n="11" tone="band" data={p.faq} guides={p.guides} />
         <Closing n="12" data={p.closing} waMessage={`Hi KOVA, I would like a quote for ${prod.name}.`} />
       </main>
       <Footer />
