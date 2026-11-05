@@ -51,3 +51,8 @@ Sources are also listed at the end of the guide.
   - Tidy-up done: RoSPA quote in the claim list now uses RoSPA's exact words.
 
 Checked by Chief of Staff 2026-10-24: PASS
+
+## Edit 6 Nov 2026 (search wording, no new claims)
+- Search Console (28 d to 3 Nov) shows the guide for "do motorized blinds need to be plugged in" (5), "motorised blinds vs manual blinds" (4) and "motorized window shades" (7), all 0 clicks.
+- Changed: two H2s now use those questions ("Do motorised blinds need to be plugged in? Battery or wired", "Motorised vs manual blinds: when manual is the better choice"); the intro says "blinds and shades"; one new line under the battery H2: "Not always. A battery motor needs no plug and no cable to the window; a hardwired motor is connected to your home's power." It only restates the two bullets below it (already PASS, same sources: Somfy WireFree, en.ts motorisation copy). Meta description reworded to the same questions.
+- No new fact, number or source, so no new Chief check was asked (decided by seo-kova; recorded here).

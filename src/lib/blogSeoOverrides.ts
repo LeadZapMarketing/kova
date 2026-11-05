@@ -57,7 +57,7 @@ export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
   "motorised-blinds-guide": {
     title: "Motorised Blinds: Battery, Wired & When It's Worth It | Kova",
     description:
-      "Motorised blinds explained: battery or wired, HomeKit control, child safety and which windows really need a motor, for roller, Venetian and VertiSheer.",
+      "Do motorised blinds need to be plugged in? Battery or wired, motorised vs manual, HomeKit control and child safety, for roller, Venetian and VertiSheer.",
     h1: "Motorised Blinds: How They Work and When They Are Worth It",
     imageAlt: "Kova VertiSheer vertical sheer blinds in Pivot Anchor",
   },
