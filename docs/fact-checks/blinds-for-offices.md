@@ -47,3 +47,12 @@ Cut while drafting (no source): eye strain or health effects of glare; any claim
 
 ## Chief of Staff rounds
 - Round 1: requested 8 Nov 2026.
+- Round 1 answered 8 Nov 2026 03:41 MYT: PASS, nothing to change.
+
+Checked by Chief of Staff 8 Nov 2026: PASS
+- ✓ Title, H1, meta description (150 chars) and excerpt match the draft; no price, no unprovable claim.
+- ✓ Image /showcase/greige-roller-800.webp live (200, image/webp); alt describes the photo.
+- ✓ Structured data: Article, author Organization "Kova Sun Shade", publisher the business, Breadcrumb; no person named.
+- ✓ 6: opened EUR-Lex 90/270/EEC Annex 2(c) and legislation.gov.uk SI 1992/2792 Schedule 2(c), same wording; the guide does not call it Malaysian law.
+- ✓ 1-5, 7-27: matched in the live script bundle (Kova's own copy), word for word where quoted; 27 same number as the live homepage.
+- Publish no earlier than 9 Nov 2026 02:46 MYT (one guide a week).
