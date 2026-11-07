@@ -33,6 +33,13 @@ export interface BlogSeoOverride {
 }
 
 export const blogSeoOverrides: Record<string, BlogSeoOverride> = {
+  "blinds-for-offices": {
+    title: "Office Blinds: Venetian or Roller for Glare & Privacy? | Kova",
+    description:
+      "How to choose office blinds: aluminium Venetian to take glare off the screen, timber for meeting rooms, sunscreen or dim-out roller, and fitting tips.",
+    h1: "Office Blinds: How to Choose for Glare, Privacy and Meeting Rooms",
+    imageAlt: "Greige roller blind lowered over a large window behind a desk with a laptop and a lamp",
+  },
   "langsir-blackout-atau-bidai-blackout": {
     title: "Langsir Blackout atau Bidai Blackout? Mana Lebih Gelap | Kova",
     description:

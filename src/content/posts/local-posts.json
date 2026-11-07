@@ -76,5 +76,18 @@
     "createdAt": "2026-11-01T18:37:00.000Z",
     "publishedAt": "2026-11-01T18:37:00.000Z",
     "updatedAt": "2026-11-01T18:37:00.000Z"
+  },
+  {
+    "id": "local-blinds-for-offices",
+    "slug": "blinds-for-offices",
+    "lang": "en",
+    "title": "Office Blinds: How to Choose for Glare, Privacy and Meeting Rooms",
+    "excerpt": "Aluminium Venetian to take glare off the screen, timber for meeting rooms, sunscreen or dim-out roller for one clean sheet: how to choose office blinds.",
+    "image": "https://kovasunshade.com/showcase/greige-roller-800.webp",
+    "author": "Kova Sun Shade",
+    "tags": "Blind guides",
+    "createdAt": "2026-11-08T12:00:00.000Z",
+    "publishedAt": "2026-11-08T12:00:00.000Z",
+    "updatedAt": "2026-11-08T12:00:00.000Z"
   }
 ]

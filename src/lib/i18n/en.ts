@@ -1000,6 +1000,7 @@ export const en = {
         { to: "/blog/zebra-blinds-vs-roller-blinds", title: "Zebra blinds vs roller blinds" },
         { to: "/blog/blinds-for-living-room", title: "Blinds for the living room" },
         { to: "/blog/motorised-blinds-guide", title: "Motorised blinds: when they are worth it" },
+        { to: "/blog/blinds-for-offices", title: "Blinds for offices" },
       ],
       faq: {
         eyebrow: "Roller blinds Malaysia FAQ",
@@ -1399,6 +1400,7 @@ export const en = {
       guides: [
         { to: "/blog/how-to-clean-blinds", title: "How to clean blinds" },
         { to: "/blog/blinds-for-living-room", title: "Blinds for the living room" },
+        { to: "/blog/blinds-for-offices", title: "Blinds for offices" },
       ],
       faq: {
         eyebrow: "Venetian Blinds Malaysia FAQ",

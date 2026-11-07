@@ -264,4 +264,13 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://kovasunshade.com/blog/blinds-for-offices</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kovasunshade.com/blog/blinds-for-offices"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kovasunshade.com/blog/blinds-for-offices"/>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
