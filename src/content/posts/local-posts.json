@@ -89,5 +89,18 @@
     "createdAt": "2026-11-08T19:42:00.000Z",
     "publishedAt": "2026-11-08T19:42:00.000Z",
     "updatedAt": "2026-11-08T19:42:00.000Z"
+  },
+  {
+    "id": "local-bidai-malaysia",
+    "slug": "bidai-malaysia",
+    "lang": "ms",
+    "title": "Penyelesaian Tingkap Bidai Pintar Untuk Setiap Rumah di Malaysia",
+    "excerpt": "Apa itu bidai dan maksudnya dalam bahasa Inggeris, kain bidai roller yang sesuai untuk cuaca panas Malaysia, cara memilih untuk setiap ruang, bidai roller berbanding langsir dan tip penjagaan.",
+    "image": "https://cchxoycyanozttgqddxn.supabase.co/storage/v1/object/public/tectone-image/blog-covers/1783664150473-lvnylt8d98k.webp",
+    "author": "Kova Sun Shade",
+    "tags": "Panduan bidai",
+    "createdAt": "2026-07-10T06:16:29.000Z",
+    "publishedAt": "2026-07-10T06:16:29.000Z",
+    "updatedAt": "2026-11-09T19:58:00.000Z"
   }
 ]
